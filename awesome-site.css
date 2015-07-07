@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: calibri, arial, helvetica, serif;
 }
 
 .container {
@@ -12,10 +13,14 @@
 	background: black;
 	color: white;
 	padding: 10px 20px;
+	width: 920px;
+	float: left;
 }
 
 #navigation {
 	padding: 20px;
+	width: 920px;
+	float: left;
 }
 
 .link {
@@ -23,19 +28,20 @@
 }
 
 #main {
-
+	width: 960px;
+	float: left;
 }
 
 #left-container {
 	float: left;
 	width: 260px;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding: 0px 20px;
 }
+
 #right-container {
 	float: left;
-	width: 640px;
-	padding-left: 20px;
+	width: 620px;
+	padding: 0px 20px;
 }
 
 .text {
