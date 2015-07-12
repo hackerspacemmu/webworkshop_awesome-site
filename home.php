@@ -1,6 +1,7 @@
 <?php
   $title = $_POST["title"];
   $content = $_POST["content"];
+  $color = $_GET["color"];
 ?>
 <!doctype html>
 <html>
@@ -13,6 +14,10 @@
     <div id="header">
       <h1>Joey's Awesome Site</h1>
     </div>
+    <form method="get" action="home.php">
+    Don't Like the Color? Enter a Color to Change it!
+    <input type="text" name="color">
+    </form>
     <div id="navigation">
       <a href="home.html" class="link">Home</a>
       <a href="about.html" class="link">About</a>
@@ -54,3 +59,8 @@
 
 </body>
 </html>
+<style>
+#header {
+  background: <?= $color ?>;
+}
+</style>
