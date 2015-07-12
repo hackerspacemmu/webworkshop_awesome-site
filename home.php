@@ -2,6 +2,7 @@
   $title = $_POST["title"];
   $content = $_POST["content"];
   $color = $_GET["color"];
+  $picture = ["mouse.jpg", "horse.jpg", "kitten.jpg"];
 ?>
 <!doctype html>
 <html>
@@ -25,7 +26,7 @@
     <div id="main">
       <div id="left-container">
         <h3>Profile</h3>
-        <img src="avatar.png">
+        <img src= <?= $picture[rand(0,2)] ?> width="250px" height="250px">
       </div>
       <div id="right-container">
 
