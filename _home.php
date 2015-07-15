@@ -8,6 +8,9 @@
   $name = $_GET["name"];
   if(isset($name)) {
     $number = $phone_numbers[$name];
+  }else {
+    $number = "";
+    $name = "";
   }
 
 ?>

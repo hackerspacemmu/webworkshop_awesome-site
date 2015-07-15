@@ -1,9 +1,15 @@
 <?php
-  $title = $_POST["title"];
-  $content = $_POST["content"];
-  $color = $_GET["color"];
+  if(isset($_POST["title"])) {
+      $title = $_POST["title"];
+  }else {
+    $title = "";
+  }
+  $content = isset($_POST["content"]) ? $_POST["content"] : ""; 
+  // ternary operator, look it up if you don't know what is going on
+  // means the same as above
+  $color = isset($_GET["color"]) ? $_GET["color"] : "";
+  $section = isset($_GET["section"]) ? $_GET["section"] : "";
   $picture = ["mouse.jpg", "horse.jpg", "kitten.jpg"];
-  $section = $_GET["section"];
 ?>
 <!doctype html>
 <html>
@@ -24,7 +30,7 @@
         <a href="home.php?section=home" class="link">Home</a>
         <a href="home.php?section=about" class="link">About</a>
       </div>
-      <?php if($section == "home" || !isset($section)) {
+      <?php if($section == "home" || $section == "") {
         include "_home.php";
       }else if($section == "about"){
         include "_about.php";
