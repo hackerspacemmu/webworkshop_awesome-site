@@ -54,7 +54,7 @@
 
 
 #built-with {
-	float: left;
+	float: right;
 	width: 960px;
 	margin-top: 40px;
 }
@@ -64,4 +64,17 @@
 	width: 300px;
 	padding: 0 10px;
 	text-align: center;
+}
+.form-control {
+	clear: both;
+	float: right;
+	border: 1px solid black;
+	padding: 20px;
+}
+.form-label {
+	width: 250px;
+}
+.post-container {
+	padding: 20px;
+	border: 1px solid black;
 }
