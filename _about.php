@@ -1,20 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<title>Awesome Site - About</title>
-	<link rel="stylesheet" type="text/css" href="awesome-site.css">
-</head>
-<body>
-	<div class="container">
-
-		<div id="header">
-			<h1>Joey's Awesome Site</h1>
-		</div>
-		<div id="navigation">
-			<a href="home.html" class="link">Home</a>
-			<a href="about.html" class="link">About</a>
-		</div>
-
 		<div id="main">
 			<div id="left-container">
 				<h3>This text is inside the<br>#left-container</h3>

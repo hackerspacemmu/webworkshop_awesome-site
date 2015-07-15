@@ -3,6 +3,7 @@
   $content = $_POST["content"];
   $color = $_GET["color"];
   $picture = ["mouse.jpg", "horse.jpg", "kitten.jpg"];
+  $section = $_GET["section"];
 ?>
 <!doctype html>
 <html>
@@ -20,9 +21,10 @@
     <input type="text" name="color">
     </form>
     <div id="navigation">
-      <a href="home.html" class="link">Home</a>
-      <a href="about.html" class="link">About</a>
+      <a href="home.php?section=home" class="link">Home</a>
+      <a href="home.php?section=about" class="link">About</a>
     </div>
+    <?php if($section == "home") { ?>
     <div id="main">
       <div id="left-container">
         <h3>Profile</h3>
@@ -56,6 +58,9 @@
 
       <input type="submit">
     </form>
+  <?php } else {
+    include "_about.php";
+    } ?>
   </div>
 
 </body>
