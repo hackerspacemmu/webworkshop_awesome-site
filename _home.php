@@ -5,7 +5,9 @@
     "Bruce"   => "012 - 5221334",
     "Andrew" => "014 - 25124423"
   );
+
   $name = $_GET["name"];
+
   if(isset($name)) {
     $number = $phone_numbers[$name];
   }else {
@@ -15,12 +17,13 @@
 
 ?>
 <div id="main">
+
   <div id="left-container">
     <h3>Profile</h3>
-    <img src= <?= $picture[rand(0,2)] ?> width="250px" height="250px">
+    <img src= <?= $picture[rand(0,2)] ?> width="250" height="250">
   </div>
-  <div id="right-container">
 
+  <div id="right-container">
     <h3>The Awesomest site in the history of the internet</h3>
     <div class="post-container">
       <h2 class="page-title"><?= $title ?></h2>
@@ -38,19 +41,21 @@
       </p>
     </div>
   </div>
+
 </div>
 <form method="get" action="home.php">
   <h3>Phone number search!</h3>
   Person name: <input type="text" name="name"> <br>
   <input type="submit">
-  <?php if(isset($number)) {
-    echo "<h3> ".$name. "   ".$number;
-    } ?>
+  <?php
+    if(isset($number)) {
+      echo "<h3> ".$name. "   ".$number;
+    }
+  ?>
 </form>
 <form method="POST" action="home.php" class="form-control">
   <h3>Submit a status update!</h3>
-  Title:
-  <input type="text" name="title"><br><br>
+  Title: <input type="text" name="title"><br><br>
   Content: <textarea name="content"></textarea> <br>
 
   <input type="submit">
