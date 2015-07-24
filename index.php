@@ -14,16 +14,26 @@
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
+  // If there is new tweet submission, persist it.
+  if (isset($_POST["title"]) && isset($_POST["content"]))
+  {
+    $stmt = mysqli_stmt_init($conn);
+    $insert_sql = "INSERT INTO tweets (title, content, author_id, author_name) VALUES (?, ?, ?, ?)";
+
+    $author_id = 1;
+    $author_name = "anonoz";
+
+    if (mysqli_stmt_prepare($stmt, $insert_sql))
+    {
+      mysqli_stmt_bind_param($stmt, "ssis", $_POST["title"], $_POST["content"], $author_id, $author_name);
+      mysqli_execute($stmt);
+    }
+  }
+
   // Fetch all the tweets, in descending order so newest tweets are shown first.
   $sql = "SELECT * FROM tweets ORDER BY id DESC";
   $result = mysqli_query($conn, $sql); 
 
-  if(isset($_POST["title"])) {
-    $title = $_POST["title"];
-  }else {
-    $title = "";
-  }
-  $content = isset($_POST["content"]) ? $_POST["content"] : "";
   // This is called ternary operator, a shortform of usual if/else statement :)
   // Read this: http://davidwalsh.name/php-shorthand-if-else-ternary-operators
   $color = isset($_GET["color"]) ? $_GET["color"] : "";
