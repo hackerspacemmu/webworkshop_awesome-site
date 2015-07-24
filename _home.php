@@ -77,12 +77,15 @@
             blue castello.
           </p>
         </div>
+        <?php while ($row = mysqli_fetch_assoc($result)): ?>
         <div class="post">
-          <h3 class="post-title"><?= $title ?></h3>
-          <p class="post-content"><?= $content ?></p>
+          <h2 class="post-title"><?= $row["title"] ?></h2>
+          <p class="post-content">
+            <?= $row["content"] ?>
+          </p>
         </div>
+        <?php endwhile; ?>
       </div>
     </div>
-
     <div id="footer"></div>
 </div>
