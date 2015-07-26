@@ -6,7 +6,7 @@
   if (isset($_POST["title"]) && isset($_POST["content"]))
   {
     $stmt = mysqli_stmt_init($conn);
-    $insert_sql = "INSERT INTO tweets (title, content, author_id, author_name) VALUES (?, ?, ?, ?)";
+    $insert_sql = "INSERT INTO statuses (title, content, author_id, author_name) VALUES (?, ?, ?, ?)";
 
     $author_id = 1;
     $author_name = "anonoz";
@@ -19,7 +19,7 @@
   }
 
   // Fetch all the tweets, in descending order so newest tweets are shown first.
-  $sql = "SELECT * FROM tweets ORDER BY id DESC";
+  $sql = "SELECT * FROM statuses ORDER BY id DESC";
   $result = mysqli_query($conn, $sql); 
 
   // This is called ternary operator, a shortform of usual if/else statement :)
