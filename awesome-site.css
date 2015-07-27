@@ -23,13 +23,28 @@
 	float: left;
 }
 
-.link {
+#navigation .left {
+	float: left;
+	width: 500px;
+}
 
+#navigation .right {
+	float: left;
+	width: 420px;
+}
+
+#navigation .right form {
+	text-align: right;
+}
+
+.link {
+	margin-right: 10px;
 }
 
 #main {
 	width: 960px;
 	float: left;
+	margin-bottom: 100px;
 }
 
 #left-container {
@@ -40,12 +55,12 @@
 
 #right-container {
 	float: left;
-	width: 620px;
-	padding: 0px 20px;
+	width: 640px;
+	padding-right: 20px;
 }
 
 .text {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 .page-title {
@@ -57,6 +72,7 @@
 	float: right;
 	width: 960px;
 	margin-top: 40px;
+	margin-bottom: 100px;
 }
 
 .item {
@@ -65,16 +81,63 @@
 	padding: 0 10px;
 	text-align: center;
 }
-.form-control {
-	clear: both;
-	float: right;
-	border: 1px solid black;
-	padding: 20px;
-}
+
 .form-label {
 	width: 250px;
 }
-.post-container {
-	padding: 20px;
-	border: 1px solid black;
+
+.post {
+	float: left;
+	width: 600px;
+	padding: 15px 20px;
+	border: 1px solid gray;
+	background: #E3F2FD;
+}
+
+.post-title {
+
+}
+
+.post-content {
+	margin-top: 5px;
+}
+
+h3.title {
+	margin-bottom: 10px;
+	color: #1A237E;
+}
+
+.new-post {
+	background: #90CAF9;
+}
+
+.new-post .left {
+	float: left;
+	width: 120px;
+}
+
+.new-post .right {
+	float: left;
+	width: 100px;
+}
+
+.new-post h3 {
+	font-style: italic;
+}
+
+.post-input {
+	width: 300px;
+}
+
+textarea.post-input {
+	height: 80px;
+}
+
+.submit-post {
+	width: 302px;
+	padding: 3px 0;
+}
+
+#phone-number-search {
+	margin-top: 30px;
 }
