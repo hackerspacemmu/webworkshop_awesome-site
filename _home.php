@@ -63,6 +63,11 @@
           <?= $row["content"] ?>
         </p>
         <p><a href="edit.php?id=<?= $row["id"] ?>">Edit</a></p>
+        <form action="delete.php" method="POST">
+          <input type="hidden" name="method" value="DELETE">
+          <input type="hidden" name="id" value="<?= $row["id"] ?>">
+          <input type="submit" value="Delete">
+        </form>
       </div>
       <?php endwhile; ?>
     </div>
