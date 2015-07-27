@@ -46,11 +46,11 @@
       </div>
       <div id="navigation">
         <div class="left">
-          <a href="home.php?section=home" class="link">Home</a>
-          <a href="home.php?section=about" class="link">About</a>
+          <a href="index.php?section=home" class="link">Home</a>
+          <a href="index.php?section=about" class="link">About</a>
         </div>
         <div class="right">
-          <form class="change-header-color" method="get" action="home.php">
+          <form class="change-header-color" method="get" action="index.php">
             Change header color:
             <input type="text" name="color" placeholder="New Header Color">
             <input type="submit">
